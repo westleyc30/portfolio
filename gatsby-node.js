@@ -1,12 +1,17 @@
-/*
 const path = require('path')
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
   return new Promise((resolve, reject) => {
-    const blogPostTemplate = path.resolve('./src/templates/blog-post.js')
-    const dayOfCodeTemplate = path.resolve('./src/templates/day-log.js')
-    const projectTemplate = path.resolve('./src/templates/project-post.js')
+    const blogPostTemplate = path.resolve(
+      './src/components/templates/blog-post.js'
+    )
+    const dayOfCodeTemplate = path.resolve(
+      './src/components/templates/day-log.js'
+    )
+    const projectTemplate = path.resolve(
+      './src/components/templates/project-post.js'
+    )
     resolve(
       graphql(`
         {
@@ -80,4 +85,3 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     )
   })
 }
-*/
