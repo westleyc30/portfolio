@@ -32,11 +32,10 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
-      resolve: 'gatsby-source-contentful',
+      resolve: `gatsby-source-contentful`,
       options: {
-        spaceId:
-          '253cc770ca1796c55f7d521052c631e159a49f3f3ec415d5a66335e798ef97c0',
-        accessToken: 'muj2c5twartd',
+        spaceId: `muj2c5twartd`,
+        accessToken: `f309bf41a58b0df97aeda0e8eb3d151289c595595f17208e8b0ca03b4cb08a0e`,
       },
     },
   ],
