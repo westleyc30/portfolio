@@ -30,8 +30,10 @@ const Layout = ({ children, data }) => (
             }
           ]}
         />
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div>{children}</div>
+        <div className="grid-main">
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <div className="content-main">{children}</div>
+        </div>
       </div>
     )}
   />

@@ -22,7 +22,8 @@
     "prismjs": "^1.15.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-icons": "^2.2.7"
   },
   "keywords": [
     "gatsby"
@@ -31,8 +32,8 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "sass": "node-sass --include-path css css/main.scss css/main.css",
-    "watch": "nodemon -e scss -x \"yarn sass\"",
+    "sass": "node-sass --watch ./css -o ./css",
+    "watch": "watch 'yarn sass' css",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

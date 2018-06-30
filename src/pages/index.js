@@ -8,24 +8,25 @@ class IndexPage extends Component {
   state = {};
   render() {
     const data = this.props.data;
-    console.log(data);
     return (
       <Layout>
-        <PostList
-          gridItem="blog-list"
-          data={data.allContentfulBlogPost.edges}
-          section={'Blog'}
-        />
-        <PostList
-          gridItem="log-list"
-          data={data.allContentfulDayOfCode.edges}
-          section={'Today I Learned'}
-        />
-        <PostList
-          gridItem="project-list"
-          data={data.allContentfulProject.edges}
-          section={'Projects'}
-        />
+        <div className="grid-lists">
+          <PostList
+            gridItem="blog-list"
+            data={data.allContentfulBlogPost.edges}
+            section={'Blog'}
+          />
+          <PostList
+            gridItem="log-list"
+            data={data.allContentfulDayOfCode.edges}
+            section={'Today I Learned'}
+          />
+          <PostList
+            gridItem="project-list"
+            data={data.allContentfulProject.edges}
+            section={'Projects'}
+          />
+        </div>
       </Layout>
     );
   }

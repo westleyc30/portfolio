@@ -1,0 +1,46 @@
+h1 {
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: #343434;
+}
+h2 {
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+h2,
+h3,
+h4,
+h5 {
+  color: #343434;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  /* font-size: 3.2rem; */
+}
+.day-log h2,
+.day-log h3,
+.day-log h4,
+.day-log h5 {
+  color: rgba(255, 255, 255, 0);
+  text-shadow: -5px -7px 0 rgba(38, 38, 38, 0.8),
+    -4px -6px 0.01px rgba(38, 38, 38, 0.8),
+    -3px -5px 0.2px rgba(38, 38, 38, 0.8);
+  display: inline-block;
+  background: #cde4e0;
+  box-shadow: 10px 0 0 #cde4e0;
+  /* padding-top: 0.5rem; */
+  /* padding-bottom: 0.5rem; */
+}
+
+.inky {
+  color: rgba(255, 255, 255, 0);
+  text-shadow: -5px -7px 0 rgba(38, 38, 38, 0.8),
+    -4px -6px 0.01px rgba(38, 38, 38, 0.8),
+    -3px -5px 0.2px rgba(38, 38, 38, 0.8);
+}
+/* .heading-secondary {
+  margin-top: 1.6rem;
+} */
+.highlight {
+  background: #cde4e0;
+  box-shadow: 10px 0 0 #cde4e0;
+}
