@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { graphql } from 'gatsby';
 import { FaTwitter, FaCodepen, FaLinkedin, FaGithub } from 'react-icons/lib/fa';
 
 class Social extends Component {
   state = {};
+
   render() {
+    const data = this.props.data;
     return (
       <div className="social">
         <ul>

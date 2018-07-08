@@ -10,12 +10,7 @@ const Header = ({ siteTitle }) => (
       marginBottom: '1.45rem'
     }}
   >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960
-      }}
-    >
+    <div>
       <h1>
         <Link
           to="/"

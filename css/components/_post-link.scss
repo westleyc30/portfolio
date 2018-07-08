@@ -1,12 +1,13 @@
 .post-link {
   list-style-type: none;
   margin-top: 1.6rem;
-  a,
-  a:visited {
-    color: #707070;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #141414;
-  }
+}
+
+.post-link a,
+.post-link a:visited {
+  color: #707070;
+  text-decoration: none;
+}
+.post-link a:hover {
+  color: #141414;
 }

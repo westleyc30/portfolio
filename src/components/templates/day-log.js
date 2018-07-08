@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Layout from '../layout';
+import moment from 'moment';
 
 class DayLog extends Component {
   render() {
@@ -17,8 +18,12 @@ class DayLog extends Component {
               { name: 'keywords', content: metaKeywords }
             ]}
           />
-          <h2>{title}</h2>
-          <p>{date}</p>
+          <header>
+            <h2>{title}</h2>
+            <p>
+              <time datetime={date}>{moment(date).format('MMMM Do YYYY')}</time>
+            </p>
+          </header>
           <div
             className="content-box content-box--daylog"
             dangerouslySetInnerHTML={{ __html: log.childMarkdownRemark.html }}

@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-
 import Header from './header';
+
 import '../../css/main.css';
+require('prismjs/themes/prism-solarizedlight.css');
 
 const Layout = ({ children, data }) => (
   <StaticQuery
@@ -18,7 +19,7 @@ const Layout = ({ children, data }) => (
       }
     `}
     render={data => (
-      <div>
+      <div className="container">
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[

@@ -6,9 +6,10 @@ import Link from 'gatsby-link';
 class PostList extends Component {
   render() {
     const props = this.props;
+    const classList = [props.gridItem, 'list'];
 
     return (
-      <div className={props.gridItem}>
+      <div className={classList.join(' ')}>
         <h2 className="heading-secondary inky">
           <span className="highlight">{props.section}</span>
         </h2>

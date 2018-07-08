@@ -36,6 +36,17 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query pageQuery {
+    contentfulPerson {
+      name
+      email
+      twitter
+      github
+      linkedin
+      codepen
+      shortBio {
+        shortBio
+      }
+    }
     allContentfulBlogPost(
       limit: 5
       filter: { node_locale: { eq: "en-US" } }

@@ -1,17 +1,20 @@
-// Normalize
+// Vendors
 @import './vendors/normalize';
 
 // abstracts
+@import './abstracts/variables';
 
 // base
 @import './base/base';
 @import './base/typography';
+
 // components
 @import './components/social';
 @import './components/post-link';
+@import './components/content-box';
+@import './components/tags';
+@import './components/about';
 
 // layout
 @import './layout/grid';
 // pages
-
-// hello
