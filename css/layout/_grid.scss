@@ -10,6 +10,9 @@
   //   margin-left: 10rem;
   //   height: auto;
   // }
+  @media screen and (max-width: 768px) {
+    margin-top: 3rem;
+  }
   @media screen and (max-width: 620px) {
     height: auto;
     margin-top: 5rem;
