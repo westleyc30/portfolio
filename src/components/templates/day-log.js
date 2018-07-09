@@ -1,47 +1,44 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import Header from '../header';
 import Layout from '../layout';
 import moment from 'moment';
+import Tags from '../Tags';
 
 class DayLog extends Component {
   render() {
     const { title, date, tags, log } = this.props.data.contentfulDayOfCode;
     const metaKeywords = tags.join(', ');
     return (
-      <Layout>
-        <div className="day-log">
-          <Helmet
-            title={`Westley Cho | ${title}`}
-            meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: metaKeywords }
-            ]}
-          />
-          <header>
-            <h2>{title}</h2>
-            <p>
-              <time datetime={date}>{moment(date).format('MMMM Do YYYY')}</time>
-            </p>
-          </header>
-          <div
-            className="content-box content-box--daylog"
-            dangerouslySetInnerHTML={{ __html: log.childMarkdownRemark.html }}
-          />
-          <div>
-            <h6>tags</h6>
-            <ul className="taglist">
-              {tags.map((tag, i) => {
-                return (
-                  <li className="tag" key={i}>
-                    {tag}
-                  </li>
-                );
-              })}
-            </ul>
+      <div className="container u-margin-top-large">
+        <Helmet
+          title={`Westley Cho | ${title}`}
+          meta={[
+            { name: 'description', content: 'Sample' },
+            { name: 'keywords', content: metaKeywords }
+          ]}
+        />
+
+        <div className="grid-main">
+          <Header />
+          <div className="content-main day-log">
+            <header>
+              <h2>{title}</h2>
+              <p>
+                <time datetime={date}>
+                  {moment(date).format('MMMM Do YYYY')}
+                </time>
+              </p>
+            </header>
+            <div
+              className="content-box content-box--daylog"
+              dangerouslySetInnerHTML={{ __html: log.childMarkdownRemark.html }}
+            />
+            <Tags tags={tags} />
           </div>
         </div>
-      </Layout>
+      </div>
     );
   }
 }
