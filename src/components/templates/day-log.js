@@ -23,7 +23,7 @@ class DayLog extends Component {
         <div className="grid-main">
           <Header />
           <div className="content-main day-log">
-            <header>
+            <header className="blog__header">
               <h2>{title}</h2>
               <p>
                 <time datetime={date}>

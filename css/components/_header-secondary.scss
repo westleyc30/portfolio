@@ -1,0 +1,8 @@
+.blog__header {
+  h2 {
+    font-size: 2.4rem;
+  }
+  @media screen and (max-width: 1080px) {
+    margin-top: 5rem;
+  }
+}
