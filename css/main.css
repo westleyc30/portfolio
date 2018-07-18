@@ -297,6 +297,9 @@ template {
 [hidden] {
   display: none; }
 
+.u-margin-top-large {
+  margin-top: 6rem; }
+
 *,
 *::after,
 *::before {
@@ -417,7 +420,7 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; }
+  min-height: 100vh; }
 
 @media screen and (max-width: 768px) {
   .container {
@@ -426,7 +429,6 @@ h5 {
 
 @media screen and (max-width: 620px) {
   .container {
-    height: auto;
     margin-top: 5rem;
     padding-bottom: 10rem; } }
 
@@ -444,7 +446,18 @@ h5 {
 @media screen and (max-width: 1080px) {
   .grid-main {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column;
+    max-width: 80rem;
+    padding: 0 5rem; } }
+
+@media screen and (max-width: 768px) {
+  .grid-main {
+    width: 95%; } }
+
+@media screen and (max-width: 620px) {
+  .grid-main {
+    width: 95%;
+    padding: 0; } }
 
 .grid-lists {
   display: grid;
@@ -481,7 +494,9 @@ h5 {
 
 @media screen and (max-width: 1336px) {
   .header-main {
-    grid-column: 1 / 4; } }
+    grid-column: 1 / 4;
+    position: inherit;
+    margin-left: 0; } }
 
 .content-main {
   grid-column: 6 / -2;
@@ -489,7 +504,8 @@ h5 {
 
 @media screen and (max-width: 1336px) {
   .content-main {
-    grid-column: 5 / -1; } }
+    grid-column: 5 / -1;
+    padding-bottom: 4rem; } }
 
 @media screen and (max-width: 620px) {
   .content-main {

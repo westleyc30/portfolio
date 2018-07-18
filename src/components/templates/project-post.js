@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import Tags from '../Tags';
 // import PropTypes from 'prop-types';
 
 class ProjectPost extends Component {
@@ -16,15 +17,7 @@ class ProjectPost extends Component {
           ]}
         />
         <h2>{title}</h2>
-        <ul>
-          {tags.map((tag, i) => {
-            return (
-              <li className="tag" key={i}>
-                {tag}
-              </li>
-            );
-          })}
-        </ul>
+        <Tags tags={tags} />
         <div
           className="content-box content-box--project"
           dangerouslySetInnerHTML={{ __html: log.childMarkdownRemark.html }}

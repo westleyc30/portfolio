@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Layout from '../layout';
+import Tags from '../Tags';
 
 class BlogPost extends Component {
   render() {
@@ -18,15 +19,7 @@ class BlogPost extends Component {
             ]}
           />
           <h1>{title}</h1>
-          <ul className="taglist">
-            {tags.map((tag, i) => {
-              return (
-                <li className="tag" key={i}>
-                  {tag}
-                </li>
-              );
-            })}
-          </ul>
+          <Tags tags={tags} />
           <div
             className="content-box content-box--blog"
             dangerouslySetInnerHTML={{

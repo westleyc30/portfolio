@@ -1,39 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Link from 'gatsby-link';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Social from './Social';
-
-const Header = ({ siteTitle }) => (
-  <div
-    className="header-main"
-    style={{
-      marginBottom: '1.45rem'
-    }}
-  >
-    <div>
-      <h1>
-        <Link
-          to="/"
-          style={{
-            textDecoration: 'none',
-            color: '#343434'
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-      <h2>
-        <span style={{ fontFamily: 'Montserrat' }}>
-          web developer / designer
-        </span>
-      </h2>
-      <Social />
-    </div>
-  </div>
-);
-
-// Header.PropTypes = {
-//   siteTitle: React.PropTypes.string.isRequired
-// };
+class Header extends Component {
+  state = {};
+  render() {
+    let headerClass = 'header-main';
+    return (
+      <div className={headerClass}>
+        <div>
+          <h1>
+            <Link
+              to="/"
+              style={{
+                textDecoration: 'none',
+                color: '#343434'
+              }}
+            >
+              Westley Cho
+            </Link>
+          </h1>
+          <h2>
+            <span style={{ fontFamily: 'Montserrat' }}>
+              web developer / designer
+            </span>
+          </h2>
+          <Social />
+        </div>
+      </div>
+    );
+  }
+}
 
 export default Header;
